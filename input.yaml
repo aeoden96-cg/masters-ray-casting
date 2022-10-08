@@ -1,0 +1,17 @@
+---
+
+elements:
+  - name: Sphere01
+    radius: 0.5
+    position: [0.0, 0.0, -1.0]
+    shape: sphere
+
+  - name: Sphere02
+    radius: 0.2
+    position: [0.3, 0, -0.5]
+    shape: sphere
+
+  - name: World
+    radius: 100
+    position: [0.0, -100.5, -1.0]
+    shape: sphere
