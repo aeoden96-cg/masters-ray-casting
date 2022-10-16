@@ -12,8 +12,16 @@ ADD_EXECUTABLE(PROJECT
         source/sphere.h
         source/hittable_list.cpp
         source/hittable_list.h
-        source/rtweekend.h
-        source/color.h source/camera.cpp source/camera.h source/rtweekend.cpp)
+        source/utils.h
+        source/color.h
+        source/camera.cpp
+        source/camera.h
+        source/utils.cpp
+        source/box.cpp
+        source/box.h
+        source/aarect.h
+        source/aarect.cpp
+        )
 
 
 target_link_libraries(
@@ -21,10 +29,12 @@ target_link_libraries(
 #        -lGLEW -lGL -lGLU -lglut -lpthread -lm
         )
 
-# copy config.yaml to build directory
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/config.yaml
-        DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/input.yaml
-        DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+# FIND ALL YAML FILES
+file(GLOB_RECURSE YAML_FILES "${CMAKE_CURRENT_SOURCE_DIR}/*.yaml")
+
+# copy config.yaml and input.yaml to build directory
+foreach(YAML_FILE ${YAML_FILES})
+        configure_file(${YAML_FILE} ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+endforeach()
 
 

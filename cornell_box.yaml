@@ -1,0 +1,28 @@
+objects:
+  - name: left_wall
+    type: yz_rect
+    size: [0, 555, 0, 555, 555]
+  - name: right_wall
+    type: yz_rect
+    size: [0, 555, 0, 555, 0]
+  - name: floor
+    type: xz_rect
+    size: [0, 555, 0, 555, 0]
+  - name: ceiling
+    type: xz_rect
+    size: [0, 555, 0, 555, 555]
+  - name: back_wall
+    type: xy_rect
+    size: [0, 555, 0, 555, 555]
+  - name: light
+    type: xz_rect
+    size: [213, 343, 227, 332, 554]
+  - name: glass_sphere
+    type: sphere
+    center: [190, 90, 190]
+    radius: 90
+  - name: metal_sphere
+    type: sphere
+    center: [400, 100, 400]
+    radius: 100
+

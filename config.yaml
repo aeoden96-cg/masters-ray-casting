@@ -1,14 +1,15 @@
 ---
 
-ratio: [16, 9]
-image_width: 640
+ratio: [1, 1]
+image_width: 600
 samples_per_pixel: 100
-max_depth: 50
+scene: "cornell_box"
 
 camera:
   viewport_height: 2.0
   focal_length: 1.0
-  origin: [0.0, 0.0, 0.0]
+  look_at: [278,   278,      0]
+  origin:  [278.0, 278.0, -800]
 
 
 
